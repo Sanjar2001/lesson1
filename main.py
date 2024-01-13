@@ -39,7 +39,7 @@
 # print(registartion)
 
 # from pydantic import BaseModel, ValidationError
-#
+# #
 # # Определение схемы данных с использованием pydantic
 # class Person(BaseModel):
 #     name: str
@@ -66,4 +66,63 @@
 # result2 = process_person_data(data2)
 # print(result2)
 
-a
+
+# def sum(a, b):
+#     a: int
+#     b: int
+#     result1 = {'Your result': a+b}
+#     print(result1)
+#
+# sum(2, 3)
+#
+# def distract(a, b):
+#     a: int
+#     b: int
+#     result2 = {'Your result': a-b}
+#     print(result2)
+#
+# distract(2, 3)
+#
+# def multiply(a, b):
+#     a: int
+#     b: int
+#     print({'Your result': a*b})
+#
+# multiply(2, 3)
+#
+# value1 = input('Value1:')
+# value2 = input('Value2:')
+# if value1 < value2:
+#     try:
+#         print('Good')
+#     except Exception as e:
+#         print(e)
+
+
+# 3. Создать модель платежной системы (Обязательно использовать связки моделей, pydantic, typing)
+# Модели:
+# - User(name, mail, address);
+# - Banks(name, rating, opened)
+# - Cards(cardholder(User), which_bank(Banks), opened);
+# - Balance(card(Cards), amount, currenc).
+
+# from pydantic import BaseModel
+# from typing import Union
+#
+# class User(BaseModel):
+#     name: str
+#     mail: str
+#     address: str
+#
+# class Banks(BaseModel):
+#     name: str
+#     rating: int
+#     opened: Union[int, str]
+# class Cards(BaseModel):
+#     cartholder: str
+#     which_bank: str
+#     opened: Union[int, str]
+# class Balance(BaseModel):
+#     card: int
+#     amount: int
+#     currency: str
